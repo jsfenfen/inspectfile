@@ -1,0 +1,11 @@
+This is a really dumb, but working, example of how to generate a create table statement from delimited data. In this case, it's from the American Community Survey. 
+
+> python parse_census2.py
+
+That should create a text file (with sql in it) called schema_parsed.txt
+
+Create a table with
+
+psql -U username -d database < schema_parsed.txt 
+
+Then copy the table in (you may have to first erase the first row of table headers) with a copy table statement. 

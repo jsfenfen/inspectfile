@@ -4,7 +4,7 @@ from rows import row
 ## Need to deal with dates, comma-delimited numbers, and currencies...
 
 # the file name to read
-filename = "/Users/jacobfenton/IRW/django_sites/1.1.1/broadband/workshop/acs_09_5yr/formatted/20095_B16010_140.txt"
+filename = "20095_B16010_140.txt"
 f = open(filename, 'r')
 
 
