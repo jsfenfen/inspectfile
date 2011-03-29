@@ -1,5 +1,5 @@
 class row(object):
-    """ a class to represent a single row. Assumes the header has already been cleaned up according to the output style we're using"""
+    """ A class to represent a single row. Assumes the header has already been cleaned up according to the output style we're using"""
     def __init__(self, rowheader):
         self.header = rowheader
         self.nulls = 0
@@ -21,7 +21,7 @@ class row(object):
 
         if (outstanding_rows - self.ints == 0):
             return("\t\"%s\" int" % (self.header))
-        elif (outstanding_rows - self.floats == 0):
+        elif (outstanding_rows - self.floats - self.ints == 0):
             return("\t\"%s\" float" % (self.header))    
 
 
